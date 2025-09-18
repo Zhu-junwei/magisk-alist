@@ -91,7 +91,7 @@ jobs:
         if: needs.check.outputs.released == 'false'
         run: |
           VERSION="${{ needs.check.outputs.latest_version }}"
-          ALIST_TAR="alist-android-amd64.tar.gz"
+          ALIST_TAR="alist-android-arm64.tar.gz"
           URL="https://github.com/AlistGo/alist/releases/download/$VERSION/$ALIST_TAR"
           echo "Downloading $URL"
           mkdir -p tmp system/bin

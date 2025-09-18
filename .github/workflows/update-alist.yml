@@ -88,8 +88,9 @@ jobs:
           git push
           owner="${{ github.repository_owner }}"
           repo="${GITHUB_REPOSITORY#*/}"
+          branch="${GITHUB_REF_NAME}
           file_path="update.json"
-          purge_url="https://purge.jsdelivr.net/gh/${owner}/${repo}/${file_path}"
+          purge_url="https://purge.jsdelivr.net/gh/${owner}/${repo}@${branch}/${file_path}"
           echo "Purging jsDelivr cache for ${owner}/${repo}/${file_path}..."
           echo "Request: $purge_url"
           response=$(curl -s -w "\nHTTP Status: %{http_code}\n" "$purge_url")

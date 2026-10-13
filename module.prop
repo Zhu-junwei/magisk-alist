@@ -1,7 +1,7 @@
 id=magisk-alist
 name=Magisk Alist
-version=v3.64.0
-versionCode=1013
+version=v3.65.0
+versionCode=1014
 author=zjw
 description=Run Alist server in background with Magisk
 updateJson=https://cdn.jsdelivr.net/gh/Zhu-junwei/magisk-alist@main/update.json
